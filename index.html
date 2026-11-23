@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tien Nguyen</title>
-  <meta name="description" content="Tien Nguyen – IT student from Mainz working at the intersection of software engineering and finance.">
+  <title>Tien Sang Nguyen</title>
+  <meta name="description" content="Tien Sang Nguyen – IT student from Mainz working at the intersection of software engineering and finance.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400&display=swap" rel="stylesheet">
@@ -13,11 +13,11 @@
 <body>
   <header class="nav">
     <div class="wrap nav-inner">
-      <a href="#top" class="logo">Tien Nguyen</a>
+      <a href="#top" class="logo">Tien Sang Nguyen</a>
       <nav>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
-        <a href="#certificates">Certificates</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -25,14 +25,26 @@
 
   <main id="top">
     <section class="hero">
-      <div class="wrap">
-        <p class="kicker">IT student · Mainz, Germany</p>
-        <h1>Combining software engineering with an understanding of financial markets.</h1>
-        <p class="lead">I am completing a vocational IT programme with a 1.1 average and plan to study Business Information Systems. In my own projects I build data pipelines that turn market data into analysis.</p>
-        <div class="cta">
-          <a class="btn" href="#projects">View projects</a>
-          <a class="text-link" href="https://github.com/Sang-TN" target="_blank" rel="noopener">GitHub profile</a>
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker">IT student · Mainz, Germany</p>
+          <h1>Combining software engineering with an understanding of financial markets.</h1>
+          <p class="lead">I am Tien Sang Nguyen. I am completing a vocational IT programme with a 1.1 average and plan to study Business Information Systems. In my own projects I build data pipelines that turn market data into analysis.</p>
+          <div class="cta">
+            <a class="btn" href="#projects">View projects</a>
+            <a class="text-link" href="https://github.com/Sang-TN" target="_blank" rel="noopener">GitHub profile</a>
+          </div>
         </div>
+        <aside class="glance">
+          <p class="glance-title">At a glance</p>
+          <dl>
+            <dt>Education</dt><dd>Higher Vocational School for IT, BBS 1 Mainz (2025 – 2027)</dd>
+            <dt>Goal</dt><dd>Bachelor in Business Information Systems</dd>
+            <dt>Focus</dt><dd>Data pipelines, financial markets, backend development</dd>
+            <dt>Languages</dt><dd>German, English</dd>
+            <dt>Based in</dt><dd>Mainz, Rhine-Main area</dd>
+          </dl>
+        </aside>
       </div>
     </section>
 
@@ -40,8 +52,9 @@
       <div class="wrap">
         <ul>
           <li><strong>1.1</strong><span>Grade average, Higher Vocational School for IT</span></li>
-          <li><strong>4</strong><span>Internships, including SAP and Accenture</span></li>
+          <li><strong>5</strong><span>Practical placements, incl. SAP, Accenture and EY</span></li>
           <li><strong>3</strong><span>Software projects in Python, Java and C++</span></li>
+          <li><strong>5</strong><span>Certificates from Bloomberg, J.P. Morgan and Goldman Sachs</span></li>
         </ul>
       </div>
     </section>
@@ -55,7 +68,21 @@
         <div class="body">
           <p>I attend the Higher Vocational School for Information Technology (HBF IT) in Mainz and will graduate in 2027 as a state-certified IT assistant with the Fachhochschulreife. My focus areas are Python, C/C++, databases and IT security.</p>
           <p>Alongside school I built up my business knowledge: financial markets through the Bloomberg Market Concepts and Finance Fundamentals courses, and practical tasks in virtual job simulations with J.P. Morgan and Goldman Sachs.</p>
-          <p>Outside of work I have played the piano for nine years and play table tennis. During my voluntary social year I coached children's and fitness groups.</p>
+          <p>What interests me most is the point where the two meet: how financial data is collected, processed and turned into decisions, and how reliable software makes that possible.</p>
+          <div class="pillars">
+            <div>
+              <h3>Technology</h3>
+              <p>Programming in Python, Java and C++, databases, event streaming with Kafka.</p>
+            </div>
+            <div>
+              <h3>Finance</h3>
+              <p>Markets, bonds and equities, risk and portfolio management.</p>
+            </div>
+            <div>
+              <h3>Business</h3>
+              <p>Business processes and consulting from placements at SAP, EY and sapite.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -68,10 +95,16 @@
           <article class="project">
             <div>
               <h3>FinTech AI-Screener</h3>
-              <p class="meta">Python, pandas, Ollama</p>
+              <p class="meta">Python, pandas, yfinance, Ollama</p>
             </div>
             <div>
-              <p>Automated market data pipeline. It loads prices via yfinance, calculates RSI and moving averages and derives trading signals from them. A locally hosted language model assesses the risk of each signal; results are shown in charts and an HTML dashboard.</p>
+              <p>Automated market data pipeline that screens stocks and combines classic technical indicators with an AI-based risk assessment.</p>
+              <ul class="points">
+                <li>Loads market data via yfinance and processes it with pandas</li>
+                <li>Calculates RSI and moving averages itself and derives buy and sell signals</li>
+                <li>A locally hosted language model (Ollama) assesses the risk of each signal</li>
+                <li>Presents the results in charts and an HTML dashboard</li>
+              </ul>
               <a class="text-link" href="https://github.com/Sang-TN/fintech-ai-screener" target="_blank" rel="noopener">Source code</a>
             </div>
           </article>
@@ -81,7 +114,12 @@
               <p class="meta">Java, Apache Kafka, PostgreSQL</p>
             </div>
             <div>
-              <p>Real-time data pipeline. A price generator streams market events through Kafka; independent consumers calculate moving averages and portfolio value live. All events are stored in a PostgreSQL database.</p>
+              <p>Real-time data pipeline modelled on how trading systems process price events.</p>
+              <ul class="points">
+                <li>A price generator streams market events through Apache Kafka</li>
+                <li>Independent consumers calculate moving averages and portfolio value live</li>
+                <li>Every event is stored in a PostgreSQL database for later analysis</li>
+              </ul>
               <a class="text-link" href="https://github.com/Sang-TN/kafka-market-stream" target="_blank" rel="noopener">Source code</a>
             </div>
           </article>
@@ -91,7 +129,11 @@
               <p class="meta">C++, raylib</p>
             </div>
             <div>
-              <p>3D N-body simulation of the collision between the Milky Way and Andromeda, showing how gravity forms tidal arms during the merger.</p>
+              <p>3D simulation of the future collision between the Milky Way and Andromeda.</p>
+              <ul class="points">
+                <li>Models both galaxies as an N-body system under gravity</li>
+                <li>Shows in real time how tidal arms form during the merger</li>
+              </ul>
               <a class="text-link" href="https://github.com/Sang-TN/galaxy-collision" target="_blank" rel="noopener">Source code</a>
             </div>
           </article>
@@ -105,66 +147,117 @@
         <h2>Internships and practical work</h2>
         <div class="rows">
           <div class="row">
-            <div class="when">Oct – Nov 2026</div>
+            <div class="when">Oct – Nov 2026<span>Klein-Winternheim</span></div>
             <div>
               <h3>IT Intern <span class="org">· sapite GmbH</span></h3>
-              <p>Object-oriented development in Java, graphical interfaces with Java Swing and messaging with Apache Kafka at a consultancy for security-critical IT.</p>
+              <ul class="points">
+                <li>Object-oriented software development in Java</li>
+                <li>Graphical user interfaces with Java Swing</li>
+                <li>Messaging with Java and Apache Kafka</li>
+                <li>Internal meetings of a consultancy for security-critical IT in the public sector</li>
+              </ul>
             </div>
           </div>
           <div class="row">
-            <div class="when">Oct 2026</div>
+            <div class="when">Oct 2026<span>Virtual</span></div>
             <div>
-              <h3>Virtual Intern <span class="org">· Accenture</span></h3>
-              <p>Fundamentals of web development (HTML, CSS, JavaScript), Kanban and agile methods, presentation training.</p>
+              <h3>Student Intern <span class="org">· Accenture</span></h3>
+              <ul class="points">
+                <li>Fundamentals of web development (HTML, CSS, JavaScript) and IDEs</li>
+                <li>Kanban, agile methods and task management in practice</li>
+                <li>Presentation and application training</li>
+              </ul>
             </div>
           </div>
           <div class="row">
-            <div class="when">Jun 2026</div>
+            <div class="when">Jun 2026<span>Eschborn</span></div>
             <div>
               <h3>Job Shadowing <span class="org">· EY</span></h3>
-              <p>Insight into tax advisory, project management methods and case studies.</p>
+              <ul class="points">
+                <li>Insight into the daily work of tax advisory</li>
+                <li>Project management methods and case studies</li>
+              </ul>
             </div>
           </div>
           <div class="row">
-            <div class="when">Apr 2026</div>
+            <div class="when">Apr 2026<span>Walldorf</span></div>
             <div>
-              <h3>School Intern <span class="org">· SAP SE</span></h3>
-              <p>Architecture of business processes and an introduction to object-oriented programming with ABAP.</p>
+              <h3>Student Intern <span class="org">· SAP SE</span></h3>
+              <ul class="points">
+                <li>Architecture and functioning of business processes</li>
+                <li>ABAP workshop: introduction to object-oriented programming</li>
+                <li>Expert discussions on linking technology and business requirements</li>
+              </ul>
             </div>
           </div>
           <div class="row">
-            <div class="when">2024 – 2025</div>
+            <div class="when">2024 – 2025<span>Mainz</span></div>
             <div>
               <h3>Voluntary Social Year <span class="org">· TG Mainz-Gonsenheim</span></h3>
-              <p>Support with bookkeeping, member database and Excel reporting; coaching of children's and fitness groups.</p>
+              <ul class="points">
+                <li>Support with preparatory bookkeeping and billing</li>
+                <li>Maintenance of the member database and Excel reports</li>
+                <li>Coaching of children's and fitness groups</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="certificates" class="section band">
+    <section id="education" class="section band">
+      <div class="wrap">
+        <p class="label">Education</p>
+        <h2>School</h2>
+        <div class="rows">
+          <div class="row">
+            <div class="when">2025 – 2027<span>Mainz</span></div>
+            <div>
+              <h3>Higher Vocational School for IT <span class="org">· BBS 1 Mainz</span></h3>
+              <p>Fachhochschulreife and state-certified IT assistant. Current average 1.1, with the top grade in every subject.</p>
+              <ul class="points">
+                <li>Structured programming</li>
+                <li>Building, configuring and administering IT systems</li>
+                <li>Developing a database with user interface</li>
+                <li>IT security and hardware-related applications</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="when">2017 – 2024<span>Mainz</span></div>
+            <div>
+              <h3>Gutenberg-Gymnasium</h3>
+              <p>Mittlere Reife (secondary school certificate)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificates" class="section">
       <div class="wrap">
         <p class="label">Certificates</p>
         <h2>Courses and simulations</h2>
         <div class="cols">
-          <div><h3>Bloomberg Market Concepts</h3><p>Bloomberg for Education, 2026</p></div>
-          <div><h3>Bloomberg Finance Fundamentals</h3><p>Bloomberg for Education, 2026</p></div>
-          <div><h3>Software Engineering Job Simulation</h3><p>J.P. Morgan via Forage, 2026</p></div>
-          <div><h3>Risk Job Simulation</h3><p>Goldman Sachs via Forage, 2026</p></div>
-          <div><h3>Cybersecurity Job Simulation</h3><p>Forage, 2026</p></div>
+          <div><h3>Bloomberg Market Concepts</h3><p class="src">Bloomberg for Education, 2026</p><p>Economic indicators, currencies, fixed income and equities.</p></div>
+          <div><h3>Bloomberg Finance Fundamentals</h3><p class="src">Bloomberg for Education, 2026</p><p>Types of investment, risk and portfolio management, ESG.</p></div>
+          <div><h3>Software Engineering Job Simulation</h3><p class="src">J.P. Morgan via Forage, 2026</p><p>Kafka integration, H2 database and REST APIs in Java.</p></div>
+          <div><h3>Risk Job Simulation</h3><p class="src">Goldman Sachs via Forage, 2026</p><p>Evaluating client profiles and real estate investments.</p></div>
+          <div><h3>Cybersecurity Job Simulation</h3><p class="src">Forage, 2026</p><p>Designing a phishing simulation and interpreting its results.</p></div>
+          <div><h3>Web Development Basics</h3><p class="src">Accenture student internship, 2026</p><p>HTML, CSS, JavaScript and agile methods.</p></div>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="section">
+    <section id="skills" class="section band">
       <div class="wrap">
         <p class="label">Skills</p>
-        <h2>Technical and language skills</h2>
+        <h2>Technical skills and interests</h2>
         <div class="cols">
-          <div><h3>Programming</h3><p>Python, C/C++, Java, SQL, ABAP (basics)</p></div>
+          <div><h3>Programming</h3><p>Python, C/C++ (very good), Java, SQL, ABAP (basics)</p></div>
           <div><h3>Tools</h3><p>Git, GitHub, Apache Kafka, PostgreSQL, pandas, Microsoft Office</p></div>
           <div><h3>Languages</h3><p>German (native), English (fluent)</p></div>
+          <div><h3>Interests</h3><p>Piano (nine years), table tennis, financial markets</p></div>
         </div>
       </div>
     </section>
@@ -183,7 +276,7 @@
   </main>
 
   <footer class="footer">
-    <div class="wrap">© 2026 Tien Nguyen</div>
+    <div class="wrap">© 2026 Tien Sang Nguyen</div>
   </footer>
 </body>
 </html>
